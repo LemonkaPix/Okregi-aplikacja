@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.twBox = new System.Windows.Forms.GroupBox();
-            this.twZdj = new System.Windows.Forms.PictureBox();
             this.twDropDown = new System.Windows.Forms.ComboBox();
             this.twTextBox = new System.Windows.Forms.TextBox();
             this.drawBtn = new System.Windows.Forms.Button();
@@ -42,7 +41,6 @@
             this.promien1num = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.twBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.twZdj)).BeginInit();
             this.distanceBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).BeginInit();
             this.promien2Box.SuspendLayout();
@@ -68,7 +66,6 @@
             // twBox
             // 
             this.twBox.BackColor = System.Drawing.Color.White;
-            this.twBox.Controls.Add(this.twZdj);
             this.twBox.Controls.Add(this.twDropDown);
             this.twBox.Controls.Add(this.twTextBox);
             this.twBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -80,19 +77,6 @@
             this.twBox.TabIndex = 7;
             this.twBox.TabStop = false;
             this.twBox.Text = "Twierdzenie";
-            // 
-            // twZdj
-            // 
-            this.twZdj.BackColor = System.Drawing.Color.Transparent;
-            this.twZdj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.twZdj.ImageLocation = "C:\\Users\\MSI\\Documents\\GitHub\\Okregi-aplikacja\\WindowsFormsApp1\\img\\1.png";
-            this.twZdj.Location = new System.Drawing.Point(459, 82);
-            this.twZdj.Name = "twZdj";
-            this.twZdj.Size = new System.Drawing.Size(347, 201);
-            this.twZdj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.twZdj.TabIndex = 2;
-            this.twZdj.TabStop = false;
-            this.twZdj.WaitOnLoad = true;
             // 
             // twDropDown
             // 
@@ -113,16 +97,16 @@
             // 
             // twTextBox
             // 
-            this.twTextBox.BackColor = System.Drawing.Color.White;
+            this.twTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.twTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.twTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.twTextBox.Location = new System.Drawing.Point(8, 134);
+            this.twTextBox.Location = new System.Drawing.Point(9, 81);
             this.twTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.twTextBox.MaxLength = 50;
             this.twTextBox.Multiline = true;
             this.twTextBox.Name = "twTextBox";
             this.twTextBox.ReadOnly = true;
-            this.twTextBox.Size = new System.Drawing.Size(432, 101);
+            this.twTextBox.Size = new System.Drawing.Size(797, 210);
             this.twTextBox.TabIndex = 0;
             this.twTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -223,7 +207,6 @@
             this.panel1.ResumeLayout(false);
             this.twBox.ResumeLayout(false);
             this.twBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.twZdj)).EndInit();
             this.distanceBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).EndInit();
             this.promien2Box.ResumeLayout(false);
@@ -247,7 +230,6 @@
         private System.Windows.Forms.GroupBox promien2Box;
         private System.Windows.Forms.NumericUpDown promien2num;
         private System.Windows.Forms.ComboBox twDropDown;
-        private System.Windows.Forms.PictureBox twZdj;
     }
 }
 

@@ -46,16 +46,16 @@ namespace WindowsFormsApp1
             };
 
             twTextBox.Text = Twierdzenia[twDropDown.SelectedIndex];
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            int pos = path.IndexOf("\\bin");
-            if (pos >= 0) 
-            { 
-                path = path.Remove(pos);
-                path += $"\\img\\{twDropDown.SelectedIndex + 1}.png";
+           // int pos = path.IndexOf("\\bin");
+           // if (pos >= 0) 
+            //{ 
+               // path = path.Remove(pos);
+                //path += $"\\img\\{twDropDown.SelectedIndex + 1}.png";
 
-                twZdj.Image = Image.FromFile(path);
-            }
+               // twZdj.Image = Image.FromFile(path);
+           // }
         }
 
         int checkValues(float p1, float p2, float o)
