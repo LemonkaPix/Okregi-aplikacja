@@ -29,148 +29,148 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.twBox = new System.Windows.Forms.GroupBox();
+            this.twDropDown = new System.Windows.Forms.ComboBox();
+            this.twTextBox = new System.Windows.Forms.TextBox();
+            this.drawBtn = new System.Windows.Forms.Button();
+            this.distanceBox = new System.Windows.Forms.GroupBox();
+            this.distanceNum = new System.Windows.Forms.NumericUpDown();
+            this.promien2Box = new System.Windows.Forms.GroupBox();
+            this.promien2num = new System.Windows.Forms.NumericUpDown();
+            this.promien1Box = new System.Windows.Forms.GroupBox();
+            this.promien1num = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.twBox.SuspendLayout();
+            this.distanceBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).BeginInit();
+            this.promien2Box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.promien2num)).BeginInit();
+            this.promien1Box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.promien1num)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.twBox);
+            this.panel1.Controls.Add(this.drawBtn);
+            this.panel1.Controls.Add(this.distanceBox);
+            this.panel1.Controls.Add(this.promien2Box);
+            this.panel1.Controls.Add(this.promien1Box);
             this.panel1.Location = new System.Drawing.Point(12, 437);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 280);
             this.panel1.TabIndex = 0;
             // 
-            // groupBox4
+            // twBox
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.White;
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox4.Location = new System.Drawing.Point(343, 16);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(612, 243);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Twierdzenie";
+            this.twBox.BackColor = System.Drawing.Color.White;
+            this.twBox.Controls.Add(this.twDropDown);
+            this.twBox.Controls.Add(this.twTextBox);
+            this.twBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.twBox.Location = new System.Drawing.Point(343, 16);
+            this.twBox.Name = "twBox";
+            this.twBox.Size = new System.Drawing.Size(612, 243);
+            this.twBox.TabIndex = 7;
+            this.twBox.TabStop = false;
+            this.twBox.Text = "Twierdzenie";
             // 
-            // comboBox1
+            // twDropDown
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.twDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.twDropDown.FormattingEnabled = true;
+            this.twDropDown.Items.AddRange(new object[] {
             "Twierdznie 1",
             "Twierdznie 2",
             "Twierdznie 3",
             "Twierdznie 4",
             "Twierdznie 5"});
-            this.comboBox1.Location = new System.Drawing.Point(7, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(599, 32);
-            this.comboBox1.TabIndex = 1;
+            this.twDropDown.Location = new System.Drawing.Point(7, 29);
+            this.twDropDown.Name = "twDropDown";
+            this.twDropDown.Size = new System.Drawing.Size(599, 32);
+            this.twDropDown.TabIndex = 1;
             // 
-            // textBox1
+            // twTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 67);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(599, 164);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.twTextBox.Location = new System.Drawing.Point(7, 67);
+            this.twTextBox.Multiline = true;
+            this.twTextBox.Name = "twTextBox";
+            this.twTextBox.ReadOnly = true;
+            this.twTextBox.Size = new System.Drawing.Size(599, 164);
+            this.twTextBox.TabIndex = 0;
+            this.twTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // drawBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(194, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 78);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Rysuj";
-            this.button1.UseVisualStyleBackColor = false;
+            this.drawBtn.BackColor = System.Drawing.Color.White;
+            this.drawBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.drawBtn.Location = new System.Drawing.Point(194, 21);
+            this.drawBtn.Name = "drawBtn";
+            this.drawBtn.Size = new System.Drawing.Size(97, 78);
+            this.drawBtn.TabIndex = 5;
+            this.drawBtn.Text = "Rysuj";
+            this.drawBtn.UseVisualStyleBackColor = false;
             // 
-            // groupBox3
+            // distanceBox
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.groupBox3.Controls.Add(this.numericUpDown3);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox3.Location = new System.Drawing.Point(17, 184);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(274, 75);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Odległość między środkami";
+            this.distanceBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.distanceBox.Controls.Add(this.distanceNum);
+            this.distanceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.distanceBox.Location = new System.Drawing.Point(17, 184);
+            this.distanceBox.Name = "distanceBox";
+            this.distanceBox.Size = new System.Drawing.Size(274, 75);
+            this.distanceBox.TabIndex = 4;
+            this.distanceBox.TabStop = false;
+            this.distanceBox.Text = "Odległość między środkami";
             // 
-            // numericUpDown3
+            // distanceNum
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.numericUpDown3.Location = new System.Drawing.Point(6, 25);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(262, 38);
-            this.numericUpDown3.TabIndex = 0;
+            this.distanceNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.distanceNum.Location = new System.Drawing.Point(6, 25);
+            this.distanceNum.Name = "distanceNum";
+            this.distanceNum.Size = new System.Drawing.Size(262, 38);
+            this.distanceNum.TabIndex = 0;
             // 
-            // groupBox2
+            // promien2Box
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox2.Controls.Add(this.numericUpDown2);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 100);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(150, 78);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Promień 2";
+            this.promien2Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.promien2Box.Controls.Add(this.promien2num);
+            this.promien2Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.promien2Box.Location = new System.Drawing.Point(17, 100);
+            this.promien2Box.Name = "promien2Box";
+            this.promien2Box.Size = new System.Drawing.Size(150, 78);
+            this.promien2Box.TabIndex = 3;
+            this.promien2Box.TabStop = false;
+            this.promien2Box.Text = "Promień 2";
             // 
-            // numericUpDown2
+            // promien2num
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.numericUpDown2.Location = new System.Drawing.Point(6, 25);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(138, 38);
-            this.numericUpDown2.TabIndex = 0;
+            this.promien2num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.promien2num.Location = new System.Drawing.Point(6, 25);
+            this.promien2num.Name = "promien2num";
+            this.promien2num.Size = new System.Drawing.Size(138, 38);
+            this.promien2num.TabIndex = 0;
             // 
-            // groupBox1
+            // promien1Box
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 16);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(150, 78);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Promień 1";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.promien1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.promien1Box.Controls.Add(this.promien1num);
+            this.promien1Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.promien1Box.Location = new System.Drawing.Point(17, 16);
+            this.promien1Box.Name = "promien1Box";
+            this.promien1Box.Size = new System.Drawing.Size(150, 78);
+            this.promien1Box.TabIndex = 2;
+            this.promien1Box.TabStop = false;
+            this.promien1Box.Text = "Promień 1";
+            this.promien1Box.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // numericUpDown1
+            // promien1num
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.numericUpDown1.Location = new System.Drawing.Point(6, 25);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(138, 38);
-            this.numericUpDown1.TabIndex = 0;
+            this.promien1num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.promien1num.Location = new System.Drawing.Point(6, 25);
+            this.promien1num.Name = "promien1num";
+            this.promien1num.Size = new System.Drawing.Size(138, 38);
+            this.promien1num.TabIndex = 0;
             // 
             // Form1
             // 
@@ -183,14 +183,14 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.twBox.ResumeLayout(false);
+            this.twBox.PerformLayout();
+            this.distanceBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).EndInit();
+            this.promien2Box.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.promien2num)).EndInit();
+            this.promien1Box.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.promien1num)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,16 +198,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown promien1num;
+        private System.Windows.Forms.GroupBox promien1Box;
+        private System.Windows.Forms.GroupBox twBox;
+        private System.Windows.Forms.TextBox twTextBox;
+        private System.Windows.Forms.Button drawBtn;
+        private System.Windows.Forms.GroupBox distanceBox;
+        private System.Windows.Forms.NumericUpDown distanceNum;
+        private System.Windows.Forms.GroupBox promien2Box;
+        private System.Windows.Forms.NumericUpDown promien2num;
+        private System.Windows.Forms.ComboBox twDropDown;
     }
 }
 
