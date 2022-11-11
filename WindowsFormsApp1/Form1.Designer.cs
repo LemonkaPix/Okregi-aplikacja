@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.twBox = new System.Windows.Forms.GroupBox();
+            this.twZdj = new System.Windows.Forms.PictureBox();
             this.twDropDown = new System.Windows.Forms.ComboBox();
             this.twTextBox = new System.Windows.Forms.TextBox();
             this.drawBtn = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.promien1num = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.twBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.twZdj)).BeginInit();
             this.distanceBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).BeginInit();
             this.promien2Box.SuspendLayout();
@@ -57,68 +59,96 @@
             this.panel1.Controls.Add(this.distanceBox);
             this.panel1.Controls.Add(this.promien2Box);
             this.panel1.Controls.Add(this.promien1Box);
-            this.panel1.Location = new System.Drawing.Point(12, 437);
+            this.panel1.Location = new System.Drawing.Point(16, 538);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 280);
+            this.panel1.Size = new System.Drawing.Size(1312, 345);
             this.panel1.TabIndex = 0;
             // 
             // twBox
             // 
             this.twBox.BackColor = System.Drawing.Color.White;
+            this.twBox.Controls.Add(this.twZdj);
             this.twBox.Controls.Add(this.twDropDown);
             this.twBox.Controls.Add(this.twTextBox);
             this.twBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.twBox.Location = new System.Drawing.Point(343, 16);
+            this.twBox.Location = new System.Drawing.Point(457, 20);
+            this.twBox.Margin = new System.Windows.Forms.Padding(4);
             this.twBox.Name = "twBox";
-            this.twBox.Size = new System.Drawing.Size(612, 243);
+            this.twBox.Padding = new System.Windows.Forms.Padding(4);
+            this.twBox.Size = new System.Drawing.Size(816, 299);
             this.twBox.TabIndex = 7;
             this.twBox.TabStop = false;
             this.twBox.Text = "Twierdzenie";
+            // 
+            // twZdj
+            // 
+            this.twZdj.BackColor = System.Drawing.Color.Transparent;
+            this.twZdj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.twZdj.ImageLocation = "C:\\Users\\MSI\\Documents\\GitHub\\Okregi-aplikacja\\WindowsFormsApp1\\img\\1.png";
+            this.twZdj.Location = new System.Drawing.Point(459, 82);
+            this.twZdj.Name = "twZdj";
+            this.twZdj.Size = new System.Drawing.Size(347, 201);
+            this.twZdj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.twZdj.TabIndex = 2;
+            this.twZdj.TabStop = false;
+            this.twZdj.WaitOnLoad = true;
             // 
             // twDropDown
             // 
             this.twDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.twDropDown.FormattingEnabled = true;
             this.twDropDown.Items.AddRange(new object[] {
-            "Twierdznie 1",
-            "Twierdznie 2",
-            "Twierdznie 3",
-            "Twierdznie 4",
-            "Twierdznie 5"});
-            this.twDropDown.Location = new System.Drawing.Point(7, 29);
+            "Okręgi rozłączne zewnętrznie",
+            "Okręgi styczne zewnętrznie",
+            "Okręgi przecinające się",
+            "Okręgi styczne wewnętrznie",
+            "Okręgi rozłączne wewnętrznie"});
+            this.twDropDown.Location = new System.Drawing.Point(9, 36);
+            this.twDropDown.Margin = new System.Windows.Forms.Padding(4);
             this.twDropDown.Name = "twDropDown";
-            this.twDropDown.Size = new System.Drawing.Size(599, 32);
+            this.twDropDown.Size = new System.Drawing.Size(797, 37);
             this.twDropDown.TabIndex = 1;
+            this.twDropDown.SelectedIndexChanged += new System.EventHandler(this.twDropDown_IndexChanged);
             // 
             // twTextBox
             // 
-            this.twTextBox.Location = new System.Drawing.Point(7, 67);
+            this.twTextBox.BackColor = System.Drawing.Color.White;
+            this.twTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.twTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.twTextBox.Location = new System.Drawing.Point(8, 134);
+            this.twTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.twTextBox.MaxLength = 50;
             this.twTextBox.Multiline = true;
             this.twTextBox.Name = "twTextBox";
             this.twTextBox.ReadOnly = true;
-            this.twTextBox.Size = new System.Drawing.Size(599, 164);
+            this.twTextBox.Size = new System.Drawing.Size(432, 101);
             this.twTextBox.TabIndex = 0;
-            this.twTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.twTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // drawBtn
             // 
             this.drawBtn.BackColor = System.Drawing.Color.White;
             this.drawBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.drawBtn.Location = new System.Drawing.Point(194, 21);
+            this.drawBtn.Location = new System.Drawing.Point(259, 26);
+            this.drawBtn.Margin = new System.Windows.Forms.Padding(4);
             this.drawBtn.Name = "drawBtn";
-            this.drawBtn.Size = new System.Drawing.Size(97, 78);
+            this.drawBtn.Size = new System.Drawing.Size(129, 96);
             this.drawBtn.TabIndex = 5;
             this.drawBtn.Text = "Rysuj";
             this.drawBtn.UseVisualStyleBackColor = false;
+            this.drawBtn.Click += new System.EventHandler(this.drawBtn_Click);
             // 
             // distanceBox
             // 
             this.distanceBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.distanceBox.Controls.Add(this.distanceNum);
             this.distanceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.distanceBox.Location = new System.Drawing.Point(17, 184);
+            this.distanceBox.Location = new System.Drawing.Point(23, 226);
+            this.distanceBox.Margin = new System.Windows.Forms.Padding(4);
             this.distanceBox.Name = "distanceBox";
-            this.distanceBox.Size = new System.Drawing.Size(274, 75);
+            this.distanceBox.Padding = new System.Windows.Forms.Padding(4);
+            this.distanceBox.Size = new System.Drawing.Size(365, 92);
             this.distanceBox.TabIndex = 4;
             this.distanceBox.TabStop = false;
             this.distanceBox.Text = "Odległość między środkami";
@@ -126,9 +156,10 @@
             // distanceNum
             // 
             this.distanceNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.distanceNum.Location = new System.Drawing.Point(6, 25);
+            this.distanceNum.Location = new System.Drawing.Point(8, 31);
+            this.distanceNum.Margin = new System.Windows.Forms.Padding(4);
             this.distanceNum.Name = "distanceNum";
-            this.distanceNum.Size = new System.Drawing.Size(262, 38);
+            this.distanceNum.Size = new System.Drawing.Size(349, 45);
             this.distanceNum.TabIndex = 0;
             // 
             // promien2Box
@@ -136,9 +167,11 @@
             this.promien2Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.promien2Box.Controls.Add(this.promien2num);
             this.promien2Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.promien2Box.Location = new System.Drawing.Point(17, 100);
+            this.promien2Box.Location = new System.Drawing.Point(23, 123);
+            this.promien2Box.Margin = new System.Windows.Forms.Padding(4);
             this.promien2Box.Name = "promien2Box";
-            this.promien2Box.Size = new System.Drawing.Size(150, 78);
+            this.promien2Box.Padding = new System.Windows.Forms.Padding(4);
+            this.promien2Box.Size = new System.Drawing.Size(200, 96);
             this.promien2Box.TabIndex = 3;
             this.promien2Box.TabStop = false;
             this.promien2Box.Text = "Promień 2";
@@ -146,9 +179,10 @@
             // promien2num
             // 
             this.promien2num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.promien2num.Location = new System.Drawing.Point(6, 25);
+            this.promien2num.Location = new System.Drawing.Point(8, 31);
+            this.promien2num.Margin = new System.Windows.Forms.Padding(4);
             this.promien2num.Name = "promien2num";
-            this.promien2num.Size = new System.Drawing.Size(138, 38);
+            this.promien2num.Size = new System.Drawing.Size(184, 45);
             this.promien2num.TabIndex = 0;
             // 
             // promien1Box
@@ -156,35 +190,40 @@
             this.promien1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.promien1Box.Controls.Add(this.promien1num);
             this.promien1Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.promien1Box.Location = new System.Drawing.Point(17, 16);
+            this.promien1Box.Location = new System.Drawing.Point(23, 20);
+            this.promien1Box.Margin = new System.Windows.Forms.Padding(4);
             this.promien1Box.Name = "promien1Box";
-            this.promien1Box.Size = new System.Drawing.Size(150, 78);
+            this.promien1Box.Padding = new System.Windows.Forms.Padding(4);
+            this.promien1Box.Size = new System.Drawing.Size(200, 96);
             this.promien1Box.TabIndex = 2;
             this.promien1Box.TabStop = false;
             this.promien1Box.Text = "Promień 1";
-            this.promien1Box.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // promien1num
             // 
             this.promien1num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.promien1num.Location = new System.Drawing.Point(6, 25);
+            this.promien1num.Location = new System.Drawing.Point(8, 31);
+            this.promien1num.Margin = new System.Windows.Forms.Padding(4);
             this.promien1num.Name = "promien1num";
-            this.promien1num.Size = new System.Drawing.Size(138, 38);
+            this.promien1num.Size = new System.Drawing.Size(184, 45);
             this.promien1num.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 897);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.twBox.ResumeLayout(false);
             this.twBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.twZdj)).EndInit();
             this.distanceBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).EndInit();
             this.promien2Box.ResumeLayout(false);
@@ -208,6 +247,7 @@
         private System.Windows.Forms.GroupBox promien2Box;
         private System.Windows.Forms.NumericUpDown promien2num;
         private System.Windows.Forms.ComboBox twDropDown;
+        private System.Windows.Forms.PictureBox twZdj;
     }
 }
 
