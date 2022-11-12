@@ -36,6 +36,15 @@ namespace WindowsFormsApp1
 
             string[] Twierdzenia =
             {
+                "Okręgi o(O₁,r) i o(O₂,r) są rozłączone zewnętrznie wtedy i tylko w tedy, gdy",
+                "Okręgi o(O₁,r) i o(O₂,r) są styczne zewnętrznie wtedy i tylko w tedy, gdy",
+                "Okręgi o(O₁,r) i o(O₂,r) przecinają się wtedy i tylko w tedy, gdy",
+                "Okręgi o(O₁,r) i o(O₂,r) są styczne wewnętrznie wtedy i tylko w tedy, gdy",
+                "Okręgi o(O₁,r) i o(O₂,r) są rozłączone wewnętrznie wtedy i tylko w tedy, gdy"
+            };
+
+            string[] Wzory =
+            {
                 "|O₁O₂| > r₁ + r₂",
                 "|O₁O₂| = r₁ + r₂",
                 "|r₁ - r₂| < |O₁O₂| < r₁ + r₂",
@@ -44,25 +53,17 @@ namespace WindowsFormsApp1
             };
 
             twTextBox.Text = Twierdzenia[twDropDown.SelectedIndex];
+            twWzor.Text = Wzory[twDropDown.SelectedIndex];
             //string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-           // int pos = path.IndexOf("\\bin");
-           // if (pos >= 0) 
+            // int pos = path.IndexOf("\\bin");
+            // if (pos >= 0) 
             //{ 
-               // path = path.Remove(pos);
-                //path += $"\\img\\{twDropDown.SelectedIndex + 1}.png";
+            // path = path.Remove(pos);
+            //path += $"\\img\\{twDropDown.SelectedIndex + 1}.png";
 
-               // twZdj.Image = Image.FromFile(path);
-           // }
-        }
-
-        int checkValues(float p1, float p2, float o)
-        {
-            if (p1 == 0) return 1;
-            if (p2 == 0) return 2;
-            if (o == 0) return 3;
-            return 0;
-
+            // twZdj.Image = Image.FromFile(path);
+            // }
         }
 
         private void drawBtn_Click(object sender, EventArgs e)
@@ -71,20 +72,7 @@ namespace WindowsFormsApp1
             float promien2 = (float)promien2num.Value;
             float odleglosc = (float)distanceNum.Value;
 
-            int errorVal = checkValues(promien1, promien2, odleglosc);
-            switch(errorVal)
-            {
-                case 1:
-                    MessageBox.Show("Nie podano pierwszego promienia");
-                    return;
-                case 2:
-                    MessageBox.Show("Nie podano drugiego promienia");
-                    return;
-                case 3:
-                    MessageBox.Show("Nie podano odległosci");
-                    return;
-            }
-            MessageBox.Show($"promien1: {promien1} promien2: {promien2} odleglosc: {odleglosc}");
+
         }
     }
 }
