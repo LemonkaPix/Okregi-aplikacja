@@ -31,8 +31,6 @@ namespace WindowsFormsApp1
             SendMessage(this.twDropDown.Handle, CB_SETCUEBANNER, 0, "Prosze wybrać twierdzenie...");
         }
 
-
-
         private void twDropDown_IndexChanged(object sender, EventArgs e)
         {
 
@@ -67,13 +65,11 @@ namespace WindowsFormsApp1
 
         }
 
-
         private void drawBtn_Click(object sender, EventArgs e)
         {
             float promien1 = (float)promien1num.Value;
             float promien2 = (float)promien2num.Value;
             float odleglosc = (float)distanceNum.Value;
-
 
             int errorVal = checkValues(promien1, promien2, odleglosc);
             switch(errorVal)
@@ -88,14 +84,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Nie podano odległosci");
                     return;
             }
-
-
             MessageBox.Show($"promien1: {promien1} promien2: {promien2} odleglosc: {odleglosc}");
-
-
-
-
         }
-
     }
 }
