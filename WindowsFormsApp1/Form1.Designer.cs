@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.twBox = new System.Windows.Forms.GroupBox();
+            this.twWzor = new System.Windows.Forms.TextBox();
             this.twDropDown = new System.Windows.Forms.ComboBox();
             this.twTextBox = new System.Windows.Forms.TextBox();
             this.drawBtn = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.promien2num = new System.Windows.Forms.NumericUpDown();
             this.promien1Box = new System.Windows.Forms.GroupBox();
             this.promien1num = new System.Windows.Forms.NumericUpDown();
-            this.twWzor = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.twBox.SuspendLayout();
             this.distanceBox.SuspendLayout();
@@ -78,6 +78,20 @@
             this.twBox.TabIndex = 7;
             this.twBox.TabStop = false;
             this.twBox.Text = "Twierdzenie";
+            // 
+            // twWzor
+            // 
+            this.twWzor.BackColor = System.Drawing.SystemColors.Control;
+            this.twWzor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.twWzor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.twWzor.Location = new System.Drawing.Point(8, 153);
+            this.twWzor.MaxLength = 50;
+            this.twWzor.Multiline = true;
+            this.twWzor.Name = "twWzor";
+            this.twWzor.ReadOnly = true;
+            this.twWzor.Size = new System.Drawing.Size(598, 84);
+            this.twWzor.TabIndex = 2;
+            this.twWzor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // twDropDown
             // 
@@ -135,6 +149,7 @@
             // 
             // distanceNum
             // 
+            this.distanceNum.DecimalPlaces = 2;
             this.distanceNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.distanceNum.Location = new System.Drawing.Point(6, 25);
             this.distanceNum.Name = "distanceNum";
@@ -143,7 +158,7 @@
             // 
             // promien2Box
             // 
-            this.promien2Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.promien2Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.promien2Box.Controls.Add(this.promien2num);
             this.promien2Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.promien2Box.Location = new System.Drawing.Point(17, 100);
@@ -155,6 +170,7 @@
             // 
             // promien2num
             // 
+            this.promien2num.DecimalPlaces = 2;
             this.promien2num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.promien2num.Location = new System.Drawing.Point(6, 25);
             this.promien2num.Name = "promien2num";
@@ -163,7 +179,7 @@
             // 
             // promien1Box
             // 
-            this.promien1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.promien1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.promien1Box.Controls.Add(this.promien1num);
             this.promien1Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.promien1Box.Location = new System.Drawing.Point(17, 16);
@@ -175,25 +191,12 @@
             // 
             // promien1num
             // 
+            this.promien1num.DecimalPlaces = 2;
             this.promien1num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.promien1num.Location = new System.Drawing.Point(6, 25);
             this.promien1num.Name = "promien1num";
             this.promien1num.Size = new System.Drawing.Size(138, 38);
             this.promien1num.TabIndex = 0;
-            // 
-            // twWzor
-            // 
-            this.twWzor.BackColor = System.Drawing.SystemColors.Control;
-            this.twWzor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.twWzor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.twWzor.Location = new System.Drawing.Point(8, 153);
-            this.twWzor.MaxLength = 50;
-            this.twWzor.Multiline = true;
-            this.twWzor.Name = "twWzor";
-            this.twWzor.ReadOnly = true;
-            this.twWzor.Size = new System.Drawing.Size(598, 84);
-            this.twWzor.TabIndex = 2;
-            this.twWzor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -206,6 +209,7 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panel1.ResumeLayout(false);
             this.twBox.ResumeLayout(false);
             this.twBox.PerformLayout();
