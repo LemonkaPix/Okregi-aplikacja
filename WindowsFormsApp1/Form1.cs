@@ -101,21 +101,21 @@ namespace WindowsFormsApp1
             Brush brush3 = new SolidBrush(Color.Yellow);
             g.DrawEllipse(pen1,
                 mid1 - promien1 * multipler / 2,
-                350 - promien1 * multipler / 2,
+                250 - promien1 * multipler / 2,
                 promien1 * multipler,
                 promien1 * multipler
                 );
             g.DrawEllipse(pen2,
                 mid2 - promien2 * multipler / 2,
-                350 - promien2 * multipler / 2,
+                250 - promien2 * multipler / 2,
                 promien2 * multipler,
                 promien2 * multipler
                 );
-            if (promien1 != 0 || promien2 != 0) g.DrawLine(pen3, mid1, 350, mid1+1, 350);
-            if (promien1 != 0 && promien2 != 0) g.DrawLine(pen3, mid1, 350, mid2, 350);
-            if(promien1 != 0 && (mid1 != mid2 || promien2 == 0)) g.DrawString("O₁", drawFont, brush3, mid1, 350);
-            if(promien2 != 0 && mid1 != mid2) g.DrawString("O₂", drawFont, brush3, mid2, 350);
-            if(promien1 != 0 && promien1 != 0 && mid1 == mid2) g.DrawString("O", drawFont, brush3, 350, 350);
+            if (promien1 != 0 || promien2 != 0) g.DrawLine(pen3, mid1, 250, mid1+1, 250);
+            if (promien1 != 0 && promien2 != 0) g.DrawLine(pen3, mid1, 250, mid2, 250);
+            if(promien1 != 0 && (mid1 != mid2 || promien2 == 0)) g.DrawString("O₁", drawFont, brush3, mid1, 250);
+            if(promien2 != 0 && mid1 != mid2) g.DrawString("O₂", drawFont, brush3, mid2, 250);
+            if(promien1 != 0 && promien1 != 0 && mid1 == mid2) g.DrawString("O", drawFont, brush3, 350, 250);
         }
 
         private void drawBtn_Click(object sender, EventArgs e)
@@ -125,6 +125,11 @@ namespace WindowsFormsApp1
             odleglosc = (float)distanceNum.Value/2;
 
             this.Refresh();
+        }
+
+        private void promien1Box_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
