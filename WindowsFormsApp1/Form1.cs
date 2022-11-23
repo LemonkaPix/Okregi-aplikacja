@@ -40,11 +40,11 @@ namespace WindowsFormsApp1
 
             string[] Twierdzenia =
             {
-                "Okręgi o(O₁,r) i o(O₂,r) są rozłączone zewnętrznie wtedy i tylko w tedy, gdy",
-                "Okręgi o(O₁,r) i o(O₂,r) są styczne zewnętrznie wtedy i tylko w tedy, gdy",
-                "Okręgi o(O₁,r) i o(O₂,r) przecinają się wtedy i tylko w tedy, gdy",
-                "Okręgi o(O₁,r) i o(O₂,r) są styczne wewnętrznie wtedy i tylko w tedy, gdy",
-                "Okręgi o(O₁,r) i o(O₂,r) są rozłączone wewnętrznie wtedy i tylko w tedy, gdy"
+                "Okręgi o(O₁,r₁) i o(O₂,r₂) są rozłączne zewnętrznie wtedy i tylko wtedy, gdy",
+                "Okręgi o(O₁,r₁) i o(O₂,r₂) są styczne zewnętrznie wtedy i tylko wtedy, gdy",
+                "Okręgi o(O₁,r₁) i o(O₂,r₂) przecinają się wtedy i tylko wtedy, gdy",
+                "Okręgi o(O₁,r₁) i o(O₂,r₂) są styczne wewnętrznie wtedy i tylko wtedy, gdy",
+                "Okręgi o(O₁,r₁) i o(O₂,r₂) są rozłączne wewnętrznie wtedy i tylko wtedy, gdy"
             };
 
             string[] Wzory =
@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
                 new Dane(5,3,8),
                 new Dane(5,3,6),
                 new Dane(5,3,2),
-                new Dane(5,3,1.4f)
+                new Dane(5,3,1)
             };
 
             twTextBox.Text = Twierdzenia[twDropDown.SelectedIndex];
@@ -91,31 +91,39 @@ namespace WindowsFormsApp1
         {
             float multipler = 100;
             float mid1 = 350;
+            float y = 300;
             float mid2 = 350 + odleglosc * multipler;
             Font drawFont = new Font("Arial", 16);
 
             Graphics g = e.Graphics;
             Pen pen1 = new Pen(Color.LightBlue);
-            Pen pen2 = new Pen(Color.Red);
+            Pen pen2 = new Pen(Color.Pink);
             Pen pen3 = new Pen(Color.Yellow);
+            Brush brush1 = new SolidBrush(Color.LightBlue);
+            Brush brush2 = new SolidBrush(Color.Pink);
             Brush brush3 = new SolidBrush(Color.Yellow);
             g.DrawEllipse(pen1,
                 mid1 - promien1 * multipler / 2,
-                250 - promien1 * multipler / 2,
+                y - promien1 * multipler / 2,
                 promien1 * multipler,
                 promien1 * multipler
                 );
             g.DrawEllipse(pen2,
                 mid2 - promien2 * multipler / 2,
-                250 - promien2 * multipler / 2,
+                y - promien2 * multipler / 2,
                 promien2 * multipler,
                 promien2 * multipler
                 );
-            if (promien1 != 0 || promien2 != 0) g.DrawLine(pen3, mid1, 250, mid1+1, 250);
-            if (promien1 != 0 && promien2 != 0) g.DrawLine(pen3, mid1, 250, mid2, 250);
-            if(promien1 != 0 && (mid1 != mid2 || promien2 == 0)) g.DrawString("O₁", drawFont, brush3, mid1, 250);
-            if(promien2 != 0 && mid1 != mid2) g.DrawString("O₂", drawFont, brush3, mid2, 250);
-            if(promien1 != 0 && promien1 != 0 && mid1 == mid2) g.DrawString("O", drawFont, brush3, 350, 250);
+            if (promien1 != 0 || promien2 != 0) g.DrawLine(pen3, mid1, y, mid1+1, y);
+            if (promien1 != 0 && promien2 != 0) g.DrawLine(pen3, mid1, y, mid2, y);
+            if(promien1 != 0 && (mid1 != mid2 || promien2 == 0)) g.DrawString("O₁", drawFont, brush3, mid1, y);
+            if(promien2 != 0 && mid1 != mid2) g.DrawString("O₂", drawFont, brush3, mid2, y);
+            if(promien1 != 0 && promien1 != 0 && mid1 == mid2) g.DrawString("O", drawFont, brush3, 350, y);
+
+            g.DrawLine(pen1, mid1, y, mid1, y + promien1 * multipler / 2);
+            if (promien1 != 0 && (mid1 != mid2 || promien2 == 0)) g.DrawString("r₁", drawFont, brush1, mid1, y + promien1 * multipler / 4);
+            g.DrawLine(pen2, mid2, y, mid2, y + promien2 * multipler / 2);
+            if (promien1 != 0 && (mid1 != mid2 || promien2 == 0)) g.DrawString("r₂", drawFont, brush2, mid2, y + promien2 * multipler / 4);
         }
 
         private void drawBtn_Click(object sender, EventArgs e)
