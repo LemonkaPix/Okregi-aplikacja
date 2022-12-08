@@ -33,21 +33,21 @@
             this.twWzor = new System.Windows.Forms.TextBox();
             this.twDropDown = new System.Windows.Forms.ComboBox();
             this.twTextBox = new System.Windows.Forms.TextBox();
+            this.promien1Box = new System.Windows.Forms.GroupBox();
+            this.promien1num = new System.Windows.Forms.NumericUpDown();
             this.drawBtn = new System.Windows.Forms.Button();
             this.distanceBox = new System.Windows.Forms.GroupBox();
             this.distanceNum = new System.Windows.Forms.NumericUpDown();
             this.promien2Box = new System.Windows.Forms.GroupBox();
             this.promien2num = new System.Windows.Forms.NumericUpDown();
-            this.promien1Box = new System.Windows.Forms.GroupBox();
-            this.promien1num = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.twBox.SuspendLayout();
+            this.promien1Box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.promien1num)).BeginInit();
             this.distanceBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).BeginInit();
             this.promien2Box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.promien2num)).BeginInit();
-            this.promien1Box.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.promien1num)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.promien2Box);
             this.panel1.Location = new System.Drawing.Point(10, 651);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1424, 196);
+            this.panel1.Size = new System.Drawing.Size(1347, 196);
             this.panel1.TabIndex = 0;
             // 
             // twBox
@@ -72,9 +72,9 @@
             this.twBox.Controls.Add(this.twDropDown);
             this.twBox.Controls.Add(this.twTextBox);
             this.twBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.twBox.Location = new System.Drawing.Point(486, 19);
+            this.twBox.Location = new System.Drawing.Point(434, 19);
             this.twBox.Name = "twBox";
-            this.twBox.Size = new System.Drawing.Size(914, 167);
+            this.twBox.Size = new System.Drawing.Size(903, 167);
             this.twBox.TabIndex = 7;
             this.twBox.TabStop = false;
             this.twBox.Text = "Twierdzenie";
@@ -122,6 +122,28 @@
             this.twTextBox.Size = new System.Drawing.Size(598, 81);
             this.twTextBox.TabIndex = 0;
             this.twTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // promien1Box
+            // 
+            this.promien1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.promien1Box.Controls.Add(this.promien1num);
+            this.promien1Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.promien1Box.Location = new System.Drawing.Point(19, 18);
+            this.promien1Box.Name = "promien1Box";
+            this.promien1Box.Size = new System.Drawing.Size(150, 78);
+            this.promien1Box.TabIndex = 2;
+            this.promien1Box.TabStop = false;
+            this.promien1Box.Text = "Promień 1";
+            this.promien1Box.Enter += new System.EventHandler(this.promien1Box_Enter);
+            // 
+            // promien1num
+            // 
+            this.promien1num.DecimalPlaces = 2;
+            this.promien1num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.promien1num.Location = new System.Drawing.Point(6, 25);
+            this.promien1num.Name = "promien1num";
+            this.promien1num.Size = new System.Drawing.Size(138, 38);
+            this.promien1num.TabIndex = 0;
             // 
             // drawBtn
             // 
@@ -177,28 +199,6 @@
             this.promien2num.Size = new System.Drawing.Size(138, 38);
             this.promien2num.TabIndex = 0;
             // 
-            // promien1Box
-            // 
-            this.promien1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.promien1Box.Controls.Add(this.promien1num);
-            this.promien1Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.promien1Box.Location = new System.Drawing.Point(19, 18);
-            this.promien1Box.Name = "promien1Box";
-            this.promien1Box.Size = new System.Drawing.Size(150, 78);
-            this.promien1Box.TabIndex = 2;
-            this.promien1Box.TabStop = false;
-            this.promien1Box.Text = "Promień 1";
-            this.promien1Box.Enter += new System.EventHandler(this.promien1Box_Enter);
-            // 
-            // promien1num
-            // 
-            this.promien1num.DecimalPlaces = 2;
-            this.promien1num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.promien1num.Location = new System.Drawing.Point(6, 25);
-            this.promien1num.Name = "promien1num";
-            this.promien1num.Size = new System.Drawing.Size(138, 38);
-            this.promien1num.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,12 +214,12 @@
             this.panel1.ResumeLayout(false);
             this.twBox.ResumeLayout(false);
             this.twBox.PerformLayout();
+            this.promien1Box.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.promien1num)).EndInit();
             this.distanceBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.distanceNum)).EndInit();
             this.promien2Box.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.promien2num)).EndInit();
-            this.promien1Box.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.promien1num)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
